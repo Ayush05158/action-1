@@ -9,11 +9,17 @@ jobs:
             - name: Checkout Repo
               uses: actions/checkout@v4
 
-            - name: Welcome message
-              run: echo "My frist github Action job"
+            - name: List and read file
+              run: |
+                  echo "My frist github Action job"
+                  ls -ltra
+                  cat README.md
 
-            - name: List files
-              run: ls
+            - name: Generate ASCII artwork
+              run: cowsay -f dragon "Run for cover, I am a DRAGCN.. ..RAWR" >> dragon.txt
 
-            - name: Read files
-              run: cat README.md
+            # - name: List files
+            #   run: ls
+
+            # - name: Read files
+            #   run: cat README.md
